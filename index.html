@@ -35,9 +35,19 @@
         .image-container {
             flex: 1; /* Image section takes 1/3 of the space */
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
             padding-right: 40px; /* Spacing between image and content */
+        }
+
+        /* Name title styling inside image container */
+        .image-container h1 {
+            font-size: 4rem;
+            color: #0073e6;
+            margin-bottom: 20px; /* Space between the name and image */
+            text-align: left; /* Align text to the left */
+            width: 100%;
         }
 
         .image-container img {
@@ -51,14 +61,6 @@
             flex: 2; /* Content section takes 2/3 of the space */
             display: flex;
             flex-direction: column;
-        }
-
-        /* Name title styling */
-        h1 {
-            font-size: 4rem;
-            color: #0073e6;
-            margin-bottom: 40px; /* Space between the name and sections */
-            text-align: center;
         }
 
         /* Section container styling */
@@ -128,16 +130,15 @@
 <body>
 
 <div class="container">
-    <!-- Left Image Section -->
+    <!-- Left Image Section with Name -->
     <div class="image-container">
-        <img src="DJR32382-01 - Cropped.jpeg" alt="Photo">
+        <!-- Large Title for Name -->
+        <h1>Kalyani Shinde</h1>
+        <img src="your-image.jpg" alt="Your Picture">
     </div>
 
     <!-- Right Content Section -->
     <div class="content">
-        <!-- Large Title for Name -->
-        <h1>Kalyani Shinde</h1>
-
         <!-- Contact Section -->
         <section>
             <h2>Contact</h2>
