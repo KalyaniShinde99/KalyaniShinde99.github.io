@@ -18,15 +18,19 @@
             background-color: #f4f4f9;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            min-height: 100%;
-            color: #333;
+            align-items: center;
+            min-height: 100vh;
             padding: 20px;
+            color: #333;
         }
 
-        /* Main container styling */
+        /* Main container that holds the sections */
         .container {
-            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap; /* This ensures responsiveness */
+            max-width: 1200px;
             width: 100%;
         }
 
@@ -37,7 +41,8 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
-            margin-bottom: 20px;
+            flex: 1; /* Allows the sections to take equal width */
+            min-width: 300px; /* Minimum width for each section */
         }
 
         /* Title styling */
@@ -91,6 +96,13 @@
 
         .cv-link:hover {
             background-color: #005bb5;
+        }
+
+        /* Media Query for small screens */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack sections vertically on small screens */
+            }
         }
     </style>
 </head>
