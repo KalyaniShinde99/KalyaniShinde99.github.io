@@ -17,10 +17,8 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            flex-direction: column; /* Centers name and sections vertically */
-            min-height: 100vh;
             padding: 20px;
             color: #333;
         }
@@ -33,16 +31,6 @@
             text-align: center;
         }
 
-        /* Main container that holds the sections */
-        .container {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap; /* Ensures responsiveness */
-            max-width: 1200px;
-            width: 100%;
-        }
-
         /* Section container styling */
         section {
             background-color: white;
@@ -50,8 +38,9 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
-            flex: 1; /* Allows the sections to take equal width */
-            min-width: 300px; /* Minimum width for each section */
+            max-width: 600px;
+            width: 100%;
+            margin-bottom: 20px; /* Space between sections */
         }
 
         /* Title styling */
@@ -106,13 +95,6 @@
         .cv-link:hover {
             background-color: #005bb5;
         }
-
-        /* Media Query for small screens */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column; /* Stack sections vertically on small screens */
-            }
-        }
     </style>
 </head>
 <body>
@@ -120,37 +102,34 @@
 <!-- Large Title for Name -->
 <h1>Kalyani Shinde</h1>
 
-<!-- Sections Container -->
-<div class="container">
-    <!-- Contact Section -->
-    <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:kalyanishinde.199@gmail.com">kalyanishinde.199@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/kalyani-shinde199">LinkedIn Profile</a></p>
-        <a class="cv-link" href="Shinde_Kalyani.pdf" download>Download My CV</a>
-    </section>
+<!-- Contact Section -->
+<section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:kalyanishinde.199@gmail.com">kalyanishinde.199@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/kalyani-shinde199">LinkedIn Profile</a></p>
+    <a class="cv-link" href="Shinde_Kalyani.pdf" download>Download My CV</a>
+</section>
 
-    <!-- Education Section -->
-    <section>
-        <h2>Education</h2>
+<!-- Education Section -->
+<section>
+    <h2>Education</h2>
 
-        <h3>Santa Clara University, CA, USA</h3>
-        <p><strong>MS in Management Information Systems</strong> (Sep 2023 - Present)</p>
-        <p>Relevant Courses: Data Analytics (Python), DBMS (SQL), Big Data Modeling & Analytics (Spark), Object-Oriented Programming (Java), NLP</p>
+    <h3>Santa Clara University, CA, USA</h3>
+    <p><strong>MS in Management Information Systems</strong> (Sep 2023 - Present)</p>
+    <p>Relevant Courses: Data Analytics (Python), DBMS (SQL), Big Data Modeling & Analytics (Spark), Object-Oriented Programming (Java), NLP</p>
 
-        <h3>Savitribai Phule Pune University, Pune, India</h3>
-        <p><strong>Bachelor of Engineering (BE) in Information Technology</strong> (July 2016 - April 2020)</p>
-    </section>
+    <h3>Savitribai Phule Pune University, Pune, India</h3>
+    <p><strong>Bachelor of Engineering (BE) in Information Technology</strong> (July 2016 - April 2020)</p>
+</section>
 
-    <!-- Skills Section -->
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Tools: SQL, Python (NumPy, Pandas, Seaborn), Spark, Tableau, MS Excel, GIT</li>
-            <li>Data Science: Classification, Regression, Decision Trees, Clustering (K-means, KNN), A/B testing, t-test, chi-sq, ANOVA</li>
-        </ul>
-    </section>
-</div>
+<!-- Skills Section -->
+<section>
+    <h2>Skills</h2>
+    <ul>
+        <li>Tools: SQL, Python (NumPy, Pandas, Seaborn), Spark, Tableau, MS Excel, GIT</li>
+        <li>Data Science: Classification, Regression, Decision Trees, Clustering (K-means, KNN), A/B testing, t-test, chi-sq, ANOVA</li>
+    </ul>
+</section>
 
 </body>
 </html>
