@@ -19,9 +19,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column; /* Centers name and sections vertically */
             min-height: 100vh;
             padding: 20px;
             color: #333;
+        }
+
+        /* Name title styling */
+        h1 {
+            font-size: 4rem;
+            color: #0073e6;
+            margin-bottom: 40px; /* Space between the name and sections */
+            text-align: center;
         }
 
         /* Main container that holds the sections */
@@ -29,7 +38,7 @@
             display: flex;
             justify-content: space-between;
             gap: 20px;
-            flex-wrap: wrap; /* This ensures responsiveness */
+            flex-wrap: wrap; /* Ensures responsiveness */
             max-width: 1200px;
             width: 100%;
         }
@@ -108,8 +117,10 @@
 </head>
 <body>
 
+<!-- Large Title for Name -->
 <h1>Kalyani Shinde</h1>
-    
+
+<!-- Sections Container -->
 <div class="container">
     <!-- Contact Section -->
     <section>
